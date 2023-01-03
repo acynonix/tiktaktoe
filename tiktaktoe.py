@@ -1,4 +1,4 @@
-def disp_board(i):
+def disp_board(i):            #defining disp board
     print('\n' * 100)
 
     print(i[7] + ' | ' + i[8] + ' | ' + i[9])
@@ -7,11 +7,11 @@ def disp_board(i):
     print('---------')
     print(i[1] + ' | ' + i[2] + ' | ' + i[3])
 
-def play(i,marker,position):
+def play(i,marker,position):          #defining play function
     i[position]=marker
 
 
-def player_input():
+def player_input():          #funtion to take input from user
     marker = ''
 
     while marker != 'x' and marker != 'o':
@@ -26,7 +26,7 @@ def player_input():
     return player1, player2
 
 
-def win(i,mark):
+def win(i,mark):          #defining win
     if (i[7]==i[8]==i[9] == mark ) or (i[4]==i[5]==i[6]==mark ) or (i[1]==i[2]==i[3]==mark) or (i[7]==i[4]==i[1]==mark) or (i[2]==i[8]==i[5]==mark) or (i[9]==i[6]==i[3]==mark) or (i[7]==i[5]==i[3]==mark) or (i[1]==i[5]==i[9]==mark) :
         if player_1 == mark:
             print(' Player 1 has won')
@@ -37,7 +37,7 @@ def win(i,mark):
 
 
 
-import random
+import random          #importing random module
 def choose_first():
     s = random.randint(1, 2)
 
@@ -81,7 +81,7 @@ def replay():
 
 
 
-def tiktaktoe():
+def tiktaktoe():          #defining the main game
     while True:
 
         print('Welcome to Tik Tak Toe')
